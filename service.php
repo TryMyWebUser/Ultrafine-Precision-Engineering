@@ -7,7 +7,7 @@
         <main>
             <!-- Breadcrumb area start  -->
             <div class="breadcrumb__area breadcrumb-space overly theme-bg-heading-primary overflow-hidden">
-                <div class="breadcrumb__background" data-background="assets/imgs/breadcrumb/breadcrumb.jpg"></div>
+                <div class="breadcrumb__background" data-background="assets/imgs/breadcrumb/breadcrumb.png"></div>
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-12">
@@ -98,8 +98,8 @@
                                     </svg>
                                 </div>
                                 <div class="why-choose-us-2__text">
-                                    <h4 class="mb-10"><a href="#">General Services</a></h4>
-                                    <p class="mb-0">We provide reliable and efficient solutions, including maintenance, repairs, installations, and specialized services to meet your needs with quality and professionalism.</p>
+                                    <h4 class="mb-10"><a href="#">24/7 Support</a></h4>
+                                    <p class="mb-0">Our 24/7 support service is designed with your satisfaction in mind, ensuring that we’re always here to assist you and provide peace of mind.</p>
                                 </div>
                             </div>
                         </div>

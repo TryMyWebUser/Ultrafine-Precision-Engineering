@@ -7,7 +7,7 @@
         <main>
             <!-- Breadcrumb area start  -->
             <div class="breadcrumb__area breadcrumb-space overly theme-bg-heading-primary overflow-hidden">
-                <div class="breadcrumb__background" data-background="assets/imgs/breadcrumb/breadcrumb.jpg"></div>
+                <div class="breadcrumb__background" data-background="assets/imgs/breadcrumb/breadcrumb.png"></div>
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-12">
@@ -57,9 +57,9 @@
                                 <div class="col-sm-6">
                                     <div class="about-us__media-video-wrapper mb-xs-30">
                                         <div class="about-us__media img3">
-                                            <img src="assets/imgs/about-us/about-media-3.jpg" alt="" />
+                                            <img src="assets/data/5.jpg" alt="" />
                                         </div>
-                                        <a href="https://www.youtube.com/watch?v=mbwuj58UEPg" class="popup-video" data-effect="mfp-move-from-top vertical-middle">
+                                        <!-- <a href="https://www.youtube.com/watch?v=mbwuj58UEPg" class="popup-video" data-effect="mfp-move-from-top vertical-middle">
                                             <div class="icon">
                                                 <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -68,16 +68,16 @@
                                                     />
                                                 </svg>
                                             </div>
-                                        </a>
+                                        </a> -->
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="about-us__media img1 mb-30">
-                                        <img src="assets/imgs/about-us/about-media-1.jpg" alt="" />
+                                        <img src="assets/data/4.jpg" alt="" />
                                     </div>
                                     <div class="about-us__media-circle__wraper">
                                         <div class="about-us__media img2">
-                                            <img src="assets/imgs/about-us/about-media-2.jpg" alt="" />
+                                            <img src="assets/data/1.jpg" alt="" />
                                         </div>
                                         <div class="about-us__box">
                                             <div class="circle">
@@ -113,7 +113,7 @@
 
 
             <section class="experience theme-bg-heading-primary section-space-85 position-relative z-1 overflow-hidden">
-                <div class="experience__bg" data-background="assets/imgs/experience/experience-2.jpg"></div>
+                <div class="experience__bg" data-background="assets/imgs/experience/experience.png"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-12">

@@ -11,7 +11,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="banner-2__item banner-2__space theme-bg-heading-primary overflow-hidden">
-                                <div class="banner-2__item-bg" data-background="assets/imgs/banner-2/banner-1.jpg"></div>
+                                <div class="banner-2__item-bg" data-background="assets/imgs/banner-2/banner-1.png"></div>
                                 <div class="banner-2__item-right-shape rr-upDown">
                                     <img src="assets/imgs/banner-2/right-shape.svg" alt="image not found" />
                                 </div>
@@ -55,9 +55,9 @@
                                 <div class="col-sm-6">
                                     <div class="about-us__media-video-wrapper mb-xs-30">
                                         <div class="about-us__media img3">
-                                            <img src="assets/imgs/about-us/about-media-3.jpg" alt="" />
+                                            <img src="assets/data/5.jpg" alt="" />
                                         </div>
-                                        <a href="https://www.youtube.com/watch?v=mbwuj58UEPg" class="popup-video" data-effect="mfp-move-from-top vertical-middle">
+                                        <!-- <a href="https://www.youtube.com/watch?v=mbwuj58UEPg" class="popup-video" data-effect="mfp-move-from-top vertical-middle">
                                             <div class="icon">
                                                 <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -66,16 +66,16 @@
                                                     />
                                                 </svg>
                                             </div>
-                                        </a>
+                                        </a> -->
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="about-us__media img1 mb-30">
-                                        <img src="assets/imgs/about-us/about-media-1.jpg" alt="" />
+                                        <img src="assets/data/4.jpg" alt="" />
                                     </div>
                                     <div class="about-us__media-circle__wraper">
                                         <div class="about-us__media img2">
-                                            <img src="assets/imgs/about-us/about-media-2.jpg" alt="" />
+                                            <img src="assets/data/1.jpg" alt="" />
                                         </div>
                                         <div class="about-us__box">
                                             <div class="circle">
@@ -147,9 +147,9 @@
                         <div class="col-xl-4 col-md-6">
                             <div class="what-we-do-2__item d-flex flex-column mb-30">
                                 <div class="mt-auto">
-                                    <h4 class="title mb-15"><a href="service.php">General Services</a></h4>
+                                    <h4 class="title mb-15"><a href="service.php">24/7 Support</a></h4>
                                     <p class="mb-0 rr-p-16">
-                                    We provide reliable and efficient solutions, including maintenance, repairs, installations, and specialized services to meet your needs with quality and professionalism.
+                                    Our 24/7 support service is designed with your satisfaction in mind, ensuring that we’re always here to assist you and provide peace of mind.
                                     </p>
                                 </div>
                             </div>
@@ -163,25 +163,25 @@
             <section class="our-project our-project__down our-project__space theme-bg-heading-primary overflow-hidden">
                 <div class="container position-relative z-1 b-t__scroll-container">
                     <!--data-target="b-t__scroll-container"-->
-                    <div class="big-text__scroll-3 b-t__scroll" data-target=".b-t__scroll-container" data-target-height="-30">PROJECTS</div>
+                    <div class="big-text__scroll-3 b-t__scroll" data-target=".b-t__scroll-container" data-target-height="-30">GALLERY</div>
 
                     <div class="row align-items-lg-end align-items-center">
                         <div class="col-xl-6">
                             <div class="section__title-wrapper text-center text-xl-start">
-                                <span class="section__subtitle justify-content-start mb-13"><span data-width="40px" class="left-separetor"></span>Our Projects</span>
-                                <h2 class="section__title title-animation text-capitalize color-white mb-0 rr-br-hidden-md" data-cursor="-opaque">Explore Recent Projects</h2>
+                                <span class="section__subtitle justify-content-start mb-13"><span data-width="40px" class="left-separetor"></span>Our Gallery</span>
+                                <!-- <h2 class="section__title title-animation text-capitalize color-white mb-0 rr-br-hidden-md" data-cursor="-opaque">Explore Recent Projects</h2> -->
                             </div>
                         </div>
-                        <div class="col-xl-6">
+                        <!-- <div class="col-xl-6">
                             <div class="d-flex justify-content-xl-end mt-xs-20 mt-sm-20 mt-md-20 mt-lg-20 justify-content-center rr-mb-13-hide-xl">
-                                <a href="about-us.html" class="rr-btn">
+                                <a href="service.php" class="rr-btn">
                                     <span class="btn-wrap">
                                         <span class="text-one">View All Projects</span>
                                         <span class="text-two">View All Projects</span>
                                     </span>
                                 </a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
@@ -191,69 +191,49 @@
                         <div class="swiper-slide">
                             <div class="our-project__slider-item">
                                 <div class="our-project__slider-item-thumbnail">
-                                    <img src="assets/imgs/project__slider/project__slider-item-1.jpg" alt="" />
-                                </div>
-                                <div class="our-project__slider-item-content text-center">
-                                    <div class="icon">
-                                        <svg width="34" height="30" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M32.8798 13.8798L20.0526 1.05263C19.4492 0.449229 18.468 0.449134 17.8647 1.05241C17.2614 1.65569 17.2615 2.63695 17.8649 3.24034L28.0464 13.4218L2.21887 13.4226C1.36359 13.4226 0.670816 14.1153 0.670899 14.9706C0.670982 15.8259 1.36389 16.5188 2.21918 16.5189L28.0467 16.5181L17.8672 26.6976C17.2639 27.3009 17.264 28.2822 17.8674 28.8855C18.4708 29.4889 19.4521 29.489 20.0553 28.8858L32.8767 16.0644C33.4833 15.4644 33.4832 14.4832 32.8798 13.8798Z"
-                                                fill="white"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <h4 class="title color-white mb-0 mt-35">
-                                        <a href="service-details.html">
-                                            Modern Pattern Style for <br />
-                                            House Roof
-                                        </a>
-                                    </h4>
+                                    <img src="assets/data/m1.png" alt="" />
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="our-project__slider-item">
                                 <div class="our-project__slider-item-thumbnail">
-                                    <img src="assets/imgs/project__slider/project__slider-item-2.jpg" alt="" />
-                                </div>
-                                <div class="our-project__slider-item-content text-center">
-                                    <div class="icon">
-                                        <svg width="34" height="30" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M32.8798 13.8798L20.0526 1.05263C19.4492 0.449229 18.468 0.449134 17.8647 1.05241C17.2614 1.65569 17.2615 2.63695 17.8649 3.24034L28.0464 13.4218L2.21887 13.4226C1.36359 13.4226 0.670816 14.1153 0.670899 14.9706C0.670982 15.8259 1.36389 16.5188 2.21918 16.5189L28.0467 16.5181L17.8672 26.6976C17.2639 27.3009 17.264 28.2822 17.8674 28.8855C18.4708 29.4889 19.4521 29.489 20.0553 28.8858L32.8767 16.0644C33.4833 15.4644 33.4832 14.4832 32.8798 13.8798Z"
-                                                fill="white"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <h4 class="title color-white mb-0 mt-35">
-                                        <a href="service-details.html">
-                                            Modern Pattern Style for <br />
-                                            House Roof
-                                        </a>
-                                    </h4>
+                                    <img src="assets/data/m2.png" alt="" />
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="our-project__slider-item">
                                 <div class="our-project__slider-item-thumbnail">
-                                    <img src="assets/imgs/project__slider/project__slider-item-3.jpg" alt="" />
+                                    <img src="assets/data/m3.png" alt="" />
                                 </div>
-                                <div class="our-project__slider-item-content text-center">
-                                    <div class="icon">
-                                        <svg width="34" height="30" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M32.8798 13.8798L20.0526 1.05263C19.4492 0.449229 18.468 0.449134 17.8647 1.05241C17.2614 1.65569 17.2615 2.63695 17.8649 3.24034L28.0464 13.4218L2.21887 13.4226C1.36359 13.4226 0.670816 14.1153 0.670899 14.9706C0.670982 15.8259 1.36389 16.5188 2.21918 16.5189L28.0467 16.5181L17.8672 26.6976C17.2639 27.3009 17.264 28.2822 17.8674 28.8855C18.4708 29.4889 19.4521 29.489 20.0553 28.8858L32.8767 16.0644C33.4833 15.4644 33.4832 14.4832 32.8798 13.8798Z"
-                                                fill="white"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <h4 class="title color-white mb-0 mt-35">
-                                        <a href="service-details.html">
-                                            Modern Pattern Style for <br />
-                                            House Roof
-                                        </a>
-                                    </h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="our-project__slider-item">
+                                <div class="our-project__slider-item-thumbnail">
+                                    <img src="assets/data/m4.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="our-project__slider-item">
+                                <div class="our-project__slider-item-thumbnail">
+                                    <img src="assets/data/m5.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="our-project__slider-item">
+                                <div class="our-project__slider-item-thumbnail">
+                                    <img src="assets/data/m6.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="our-project__slider-item">
+                                <div class="our-project__slider-item-thumbnail">
+                                    <img src="assets/data/m7.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -263,7 +243,7 @@
             <!-- our-project area end -->
             <br><br><br>
             <!-- working-process-2 area start -->
-            <section class="working-process-2 working-process-2__space section-bg-4 overflow-hidden">
+            <!-- <section class="working-process-2 working-process-2__space section-bg-4 overflow-hidden">
                 <div class="working-process-2__bg" data-background="assets/imgs/working-process-2/bg.jpg"></div>
                 <div class="working-process-2__bg-overlay leftRight" data-background="assets/imgs/working-process-2/bg-shape.svg"></div>
                 <div class="container">
@@ -5196,9 +5176,9 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- working-process-2 area end -->
-            <br><br><br>
+            <!-- <br><br><br> -->
             <!-- get-a-quote area start -->
             <section class="get-a-quote get-a-quote__space theme-bg-primary overflow-hidden">
                 <div class="get-a-quote__bg" data-background="assets/imgs/get-a-quote/bg.jpg"></div>
@@ -5239,7 +5219,7 @@
             <!-- lets-talk area start -->
             <section class="lets-talk section-space-115 section-bg-2 overflow-hidden">
                 <div class="lets-talk-bg">
-                    <div class="overlay"><img src="assets/imgs/lets-talk/bg.png" alt="" /></div>
+                    <div class="overlay"><img src="assets/data/6.jpg" alt="" /></div>
                 </div>
                 <div class="container">
                     <div class="row">
