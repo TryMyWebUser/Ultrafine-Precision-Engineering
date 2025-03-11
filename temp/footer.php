@@ -30,8 +30,8 @@
                                         <ul>
                                             <li><a href="index.php">Home</a></li>
                                             <li><a href="about-us.php">About Us</a></li>
-                                            <li><a href="product.php">Products</a></li>
-                                            <li><a href="job.php">Job Work</a></li>
+                                            <!-- <li><a href="product.php">Products</a></li>
+                                            <li><a href="job.php">Job Work</a></li> -->
                                             <li><a href="service.php">Service</a></li>
                                             <li><a href="contact.php">Contact Us</a></li>
                                         </ul>
@@ -168,4 +168,6 @@
         <script src="assets/js/image-reveal-hover.js"></script>
     </body>
 
+    <a href="https://wa.me/+919600401004" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+    
 </html>

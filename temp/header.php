@@ -1,3 +1,12 @@
+<?php
+
+    include "libs/load.php";
+
+    $conn = Database::getConnect();
+    $categorys = Operations::getCatePage('pro', $conn);
+    $category = Operations::getCatePage('job', $conn);
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
     <head>
@@ -20,6 +29,42 @@
         <link rel="stylesheet" href="assets/css/plugins/carouselTicker.css" />
         <link rel="stylesheet" href="assets/css/plugins/image-reveal-hover.css" />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <!-- << whatsapp >> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <style>
+            /* for desktop */
+            .whatsapp_float {
+                position:fixed;
+                width:60px;
+                height:60px;
+                bottom:40px;
+                left:40px;
+                background-color:#25d366;
+                color:#FFF;
+                border-radius:50px;
+                text-align:center;
+                    font-size:30px;
+                box-shadow: 2px 2px 3px #999;
+                    z-index:100;
+            }
+
+            .whatsapp-icon {
+                margin-top:16px;
+            }
+            /* for mobile */
+            @media screen and (max-width: 767px){
+                .whatsapp-icon {
+                margin-top:10px;
+                }
+                .whatsapp_float {
+                    width: 40px;
+                    height: 40px;
+                    bottom: 20px;
+                    left: 10px;
+                    font-size: 22px;
+                }
+            }
+        </style>
     </head>
 
     <body class="body-1">
@@ -236,119 +281,46 @@
                                     <nav id="mobile-menu">
                                         <ul>
                                             <li> <!-- class="active" -->
-                                                <!-- <li class="has-dropdown has-mega-menu active"> -->
                                                 <a href="index.php">Home</a>
-                                                <!-- <ul class="mega-menu mega-menu-grid-3">
-                                                    <li>
-                                                        <div class="home__menu-item">
-                                                            <div class="home__menu-thumb">
-                                                                <img src="assets/imgs/menu/menu-home-1.jpg" alt="thumb not found" />
-                                                                <div class="home__menu-buttons">
-                                                                    <a href="index.php" class="rr-btn__header">
-                                                                        <span class="btn-wrap">
-                                                                            <span class="text-one">Multi Page</span>
-                                                                            <span class="text-two">Multi Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                    <a href="index-one-page.html" class="rr-btn__header">
-                                                                        <span class="btn-wrap">
-                                                                            <span class="text-one">One Page</span>
-                                                                            <span class="text-two">One Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <h4 class="home__menu-title">Home 1</h4>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="home__menu-item">
-                                                            <div class="home__menu-thumb">
-                                                                <img src="assets/imgs/menu/menu-home-2.jpg" alt="thumb not found" />
-                                                                <div class="home__menu-buttons">
-                                                                    <a href="index-2.html" class="rr-btn__header">
-                                                                        <span class="btn-wrap">
-                                                                            <span class="text-one">Multi Page</span>
-                                                                            <span class="text-two">Multi Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                    <a href="index-2-one-page.html" class="rr-btn__header">
-                                                                        <span class="btn-wrap">
-                                                                            <span class="text-one">One Page</span>
-                                                                            <span class="text-two">One Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <h4 class="home__menu-title">Home 2</h4>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="home__menu-item">
-                                                            <div class="home__menu-thumb">
-                                                                <img src="assets/imgs/menu/menu-home-3.jpg" alt="thumb not found" />
-                                                                <div class="home__menu-buttons">
-                                                                    <a href="index-3.html" class="rr-btn__header">
-                                                                        <span class="btn-wrap">
-                                                                            <span class="text-one">Multi Page</span>
-                                                                            <span class="text-two">Multi Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                    <a href="index-3-one-page.html" class="rr-btn__header">
-                                                                        <span class="btn-wrap">
-                                                                            <span class="text-one">One Page</span>
-                                                                            <span class="text-two">One Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <h4 class="home__menu-title">Home 3</h4>
-                                                        </div>
-                                                    </li>
-                                                </ul> -->
                                             </li>
                                             <li>
                                                 <a href="about-us.php">About Us</a>
                                             </li>
+                                            <?php if (!empty($categorys)) { ?>
                                             <li class="has-dropdown">
                                                 <a href="javascript:void(0)">Products</a>
                                                 <ul class="submenu">
-                                                    <li><a href="product.php#M">Milling Work</a></li>
-                                                    <li><a href="product.php#L">Lathe Work</a></li>
+                                                    <?php
+                                                        foreach ($categorys as $cate) {
+                                                    ?>
+                                                    <li><a href="common.php?data=<?= $cate['category'] ?>"><?= $cate['category'] ?></a></li>
+                                                    <?php } ?>
                                                 </ul>
                                             </li>
-                                            <!-- <li>
-                                                <a href="product.php">Products</a>
-                                            </li> -->
+                                            <?php } else { ?>
                                             <li>
-                                                <a href="job.php">Job Work</a>
+                                                <a href="javascript:void(0)">Products</a>
                                             </li>
+                                        
+                                            <?php } if (!empty($category)) { ?>
+                                            <li class="has-dropdown">
+                                                <a href="javascript:void(0)">Job Work</a>
+                                                <ul class="submenu">
+                                                    <?php
+                                                        foreach ($category as $cate) {
+                                                    ?>
+                                                    <li><a href="common.php?data=<?= $cate['category'] ?>"><?= $cate['category'] ?></a></li>
+                                                    <?php } ?>
+                                                </ul>
+                                            </li>
+                                            <?php } else { ?>
+                                            <li>
+                                                <a href="javascript:void(0)">Job Work</a>
+                                            </li>
+                                            <?php } ?>
                                             <li>
                                                 <a href="service.php">Service</a>
                                             </li>
-                                            <!-- <li class="has-dropdown">
-                                                <a href="javascript:void(0)">Service</a>
-                                                <ul class="submenu">
-                                                    <li><a href="service.html">Service</a></li>
-                                                    <li><a href="service-details.html">Service Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="has-dropdown">
-                                                <a href="javascript:void(0)">Project</a>
-                                                <ul class="submenu">
-                                                    <li><a href="project.html">Project</a></li>
-                                                    <li><a href="project-2.html">Project 2</a></li>
-                                                    <li><a href="project-3.html">Project 3</a></li>
-                                                    <li><a href="project-details.html">Project Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="has-dropdown">
-                                                <a href="blog.html">Blog</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                                </ul>
-                                            </li> -->
                                             <li><a href="contact.php">Contact</a></li>
                                         </ul>
                                     </nav>

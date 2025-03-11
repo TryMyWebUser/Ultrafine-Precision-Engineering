@@ -1,7 +1,18 @@
 <?php
-
+ob_start(); // Start output buffering
     include "temp/header.php";
 
+    // Check if 'data' exists
+    if (!isset($_GET['data'])) {
+        // Redirect properly
+        header("Location: index.php");
+        exit(); // Always exit after header() to stop further execution
+    }
+
+    $getData = $_GET['data'];
+    
+    $products = Operations::getProductPage($getData, $conn);
+ob_end_flush(); // Send the buffered output
 ?>
 
         <main>
@@ -12,7 +23,7 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-12">
                             <div class="breadcrumb__content text-center">
-                                <h1 class="breadcrumb__title color-white title-animation">Product</h1>
+                                <h1 class="breadcrumb__title color-white title-animation"><?= $getData ?></h1>
                                 <div class="breadcrumb__menu d-inline-flex justify-content-center">
                                     <nav>
                                         <ul>
@@ -34,7 +45,7 @@
                                                     </a>
                                                 </span>
                                             </li>
-                                            <li class="active"><span>Product</span></li>
+                                            <li class="active"><span><?= $getData ?></span></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -51,41 +62,30 @@
                 <div class="container">
                     <div class="col-12">
                         <div class="section__title-wrapper text-center mt-60 mt-sm-40 mt-xs-35">
-                            <span class="section__subtitle justify-content-center mb-13 ml-0" style="margin-left: 50px;"><span data-width="40px" class="left-separetor" style="width: 40px; opacity: 1;"></span>Our Service<span data-width="40px" class="right-separetor" style="width: 40px; opacity: 1;"></span></span>
+                            <span class="section__subtitle justify-content-center mb-13 ml-0" style="margin-left: 50px;"><span data-width="40px" class="left-separetor" style="width: 40px; opacity: 1;"></span>Our Products<span data-width="40px" class="right-separetor" style="width: 40px; opacity: 1;"></span></span>
                         </div>
                     </div>
-                    <div class="row py-5" id="M">
+
+                    <?php
+                        if (!empty($products)) {
+                            foreach ($products as $pro) { 
+                    ?>
+                    <div class="row py-5">
                         <div class="col-lg-5">
                             <div class="team-details__media">
-                                <img src="https://images.prismic.io/xometry-marketing/e59092d8-3449-4128-b222-9a9dd877e4db_milling-machine.jpg?auto=compress%2Cformat&rect=166%2C0%2C667%2C667&w=486&h=486&fit=max" alt="image not found" />
+                                <img src="assets/<?= $pro['img'] ?>" alt="image not found" />
                             </div>
                         </div>
 
                         <div class="col-lg-7">
                             <div class="team-details__content">
-                                <h2 class="mb-10">Milling Work</h2>
-                                <p class="mb-0">
-                                Owing to our expertise, we are engaged in offering the Milling Work. We are offering these services as per the requirements of our clients. Our services are widely appreciated for their high performance, outstanding operation and timely execution. These services are rendered under the strict guidance of the skilled engineers and technicians of the industry. They ensure to carry out the services in the most meticulous manner using advanced tools and equipment.
-                                </p>
+                                <h2 class="mb-10"><?= $pro['title'] ?></h2>
+                                <p class="mb-0"><?= $pro['dec'] ?></p>
                             </div>
                         </div>
                     </div>
-                    <div class="row py-5" id="L">
-                        <div class="col-lg-5">
-                            <div class="team-details__media">
-                                <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/DA/IH/AG/935221/pricision-components-500x500.jpg" alt="image not found" />
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-7">
-                            <div class="team-details__content">
-                                <h2 class="mb-10">Lathe Work</h2>
-                                <p class="mb-0">
-                                Our firm is known as the renowned service provider of Lathe Work. The offered service is imparted in precise and prompt manner with the help of our experienced personnel, who possess in-depth knowledge in this domain. They enable us to meet the growing demands of our clients. Our personnel work in close coordination and render various solutions according to the detailed specifications of our clients. These services are highly acclaimed among our clients and offered to them at reasonable charges.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } } else { echo "<p>Product Not Found</p>"; } ?>
+
                 </div>
             </section>
             <!-- Product End -->
